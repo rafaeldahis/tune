@@ -1,0 +1,6 @@
+Options +FollowSymLinks  
+RewriteEngine On  
+RewriteCond %{SCRIPT_FILENAME} !-d  
+RewriteCond %{SCRIPT_FILENAME} !-f  
+RewriteRule ^tools/(.*)*$ ./tool.php?tool=$1  
+RewriteRule ^tags/(.*)*$ ./tag.php?tag=$1  

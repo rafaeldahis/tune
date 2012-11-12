@@ -811,6 +811,15 @@ font-family: 'Droid Sans', sans-serif;
 font-size:12px;
 }
 
+.service p{
+font-size: 13px;
+color:#444;
+}
+.service h5{
+font-size: 15px;
+}
+
+
 .service .row{
 padding: 2% 0%;
 }

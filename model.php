@@ -239,6 +239,17 @@ function getAllTags()
         return $allTags;       
 }
 
+function getAllLists()
+{
+	$sql = "SELECT * FROM list";
+        $result =  my_mysql_query($sql);
+        $allLists=array();
+        while ($row = mysql_fetch_array($result)) {
+        array_push($allLists, $row);
+        }
+        return $allLists;       
+}
+
 function getAllTools()
 {
 	$sql = "SELECT * FROM tool order by name";
@@ -248,7 +259,31 @@ function getAllTools()
         array_push($allTools, $row);
         }
         return $allTools;       
+}
+
+function getListBySlug($slug)
+{
+        connect_db();
+        $slug = mysql_real_escape_string($slug);
         
+	$sql = "SELECT * FROM list where slug='".$slug."'";
+        $result =  my_mysql_query($sql);
+        
+        return mysql_fetch_assoc($result);       
+
+}
+
+function getListToolsById($listId)
+{
+        connect_db();        
+	$sql = "SELECT * FROM listtool inner join tool on toolName=name where listId=$listId order by rank asc";
+        $result =  my_mysql_query($sql);
+        $allListTools=array();
+        while ($row = mysql_fetch_array($result)) {
+        array_push($allListTools, $row);
+        }
+        return $allListTools;       
+
 }
 
 function getHotTags()

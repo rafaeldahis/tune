@@ -141,7 +141,7 @@ echo '<!-- Footer -->
       <div class="span12"><h4 class="pull-left">Join</h4><br/></div>
       <div class="span12">
       <a href="new-tool.php" title="add a tool" class="btn" rel="nofollow">Add a Tool</a>
-      &nbsp&nbsp<a href="new-tool.php?befeatured=true" title="be a featured tool" class="btn" rel="nofollow">Be featured</a>
+      &nbsp&nbsp<a href="contact.php" title="be a featured tool" class="btn" rel="nofollow">Be featured</a>
       </div><br/><br/><br/>
       <div class="span12"><div class="fb-like-box" data-href="http://www.facebook.com/tuneyourstartup" data-width="960" data-height="170" data-show-faces="true" data-stream="false" data-header="false"></div>
       </div>
